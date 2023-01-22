@@ -35,7 +35,7 @@ export const deleteList = async(id, dispatch) => {
 export const createList = async (list, dispatch) => {
   dispatch(createListStart());
   try {
-    const res = await axios.post("https://revoxfilm-api.onrender.com/api/"+'/lists', list,  {
+    const res = await axios.post("https://revoxfilm-api.onrender.com/api/"+'lists', list,  {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       },

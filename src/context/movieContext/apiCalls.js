@@ -14,7 +14,7 @@ import axios from 'axios';
 export const getMovies = async (dispatch) => {
   dispatch(getMoviesStart());
   try {
-    const res = await axios.get("https://revoxfilm-api.onrender.com/api/"+'/movies', {
+    const res = await axios.get("https://revoxfilm-api.onrender.com/api/"+'movies', {
       headers: {
         token: 'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
       },
