@@ -35,7 +35,7 @@ export default function Home() {
         const res = await axios.get("https://revoxfilm-api.onrender.com/api/"+'users/stats', {
           headers: {
             token:
-              'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzE0ODMzNzBhNjEyMDdmNzMxMTZiZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY3NDIxOTgwOCwiZXhwIjoxNjc0NjUxODA4fQ.uNmhfOyNwVF7rKTg6SiS8_7hsWrozE_fsCMfKpQjpaM',
+              'Bearer ' + JSON.parse(localStorage.getItem('user')).accessToken,
           },
         });
         const statsList = res.data.sort(function (a, b) {
